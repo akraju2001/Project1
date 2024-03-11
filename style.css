@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rgb(250, 13, 13);
+    box-shadow: 0 0 10px black;
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+
+}
+
+section nav ul{
+    list-style:none;
+
+}
+
+section nav ul li{
+    display: inline-block;
+    margin : 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(240, 207, 63);
+    display: block;
+    transition: 0.3s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: rgb(240, 207, 63);
+}
+
+section nav .icon i{
+    font-size: 22px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+section nav .icon i:hover{
+    color: rgb(240, 207, 63);
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+    margin-bottom: 20px;
+}
+
+section .main .menutext h1{
+    color: rgb(216, 216, 58);
+    font-size: 60px;
+    position: relative;
+    top: -60px;
+    left: 0px;
+}
+
+section .main .menutext h1 span{
+    margin-left: 15px;
+    color: rgb(10, 187, 10);
+    font-family:boli;
+    line-height: 24px;
+    font-size: 40px;
+}
+
+section .main .main-logo img{
+    width:700px;
+    position: relative;
+    
+    left: 70px;
+   
+    animation: c 2s linear infinite;
+}
+
+@keyframes c{
+0%, 100%{
+    transform: translateX(40px);
+}
+50%{
+    transform: translateY(40px);
+}
+}
+
+
+section p{
+    width: 450px;
+    text-align: justify;
+    position: relative;
+    left:110px;
+    bottom: 80px;
+    line-height: 22px;
+}
+
+section .main-btn{
+    background-color: red;
+    position: relative;
+    left: 110px;
+    bottom: 40px;
+    width:130px;
+    cursor: crosshair;
+    padding: 10px 20px;
+}
+
+section .main-btn a{
+    color: white;
+    margin-right: 5px;
+    text-decoration: none;
+
+}
+
+section .main-btn i{
+    color: white;
+    transition: 0.4s; 
+}
+
+
+section .main-btn:hover i{
+    color: rgb(255, 252, 46);
+    transform: translateX(8);
+}
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: rgb(10, 187, 10);
+    margin-left: 15px;
+    font-family: boli;
+}
+
+.menu .menu-box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+}
+
+.menu .menu-box .menu-card{
+    width: 325px;
+    height: 470px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(7, 5, 5);
+    background-color: rgba(255, 255, 255, 0.834);
+}
+
+.menu .menu-box .menu-card .menu-image {
+    width: 300px;
+    height: 245px;
+    margin:0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.menu .menu-box .menu-card .menu-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: c 5s linear infinite;
+}
+
+@keyframes c{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.video h1{
+    text-align: center;
+    color: red;
+    font-style: mv boli;
+    font-size:50px;
+}
+
+.video .ifram iframe{
+    width: 40%;
+    border-radius: 10px;
+    
+    margin-left: 470px;
+    margin-top: 20px;
+    
+}
+
+.menu .m1{
+    color: red;
+}
+
+.menu .menu-box .menu-card .small-card{
+    width: 45px;
+    height: 45px;
+    float: left;
+    position: relative;
+    top: -240px;
+    left: 20px;
+    opacity: 1;
+    border-radius: 7px;
+    color: rgb(246, 160, 21);
+    transition: 0.2s;
+}
+
+.menu .menu-box .menu-card:hover .small-card{
+    position: relative;
+    top: -240px;
+    left: 25px;
+    opacity: 1;
+}
+
+.menu .menu-box .menu-card:hover .small-card i{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: rgb(246, 160, 21);
+    cursor:pointer;
+    
+}
+
+.menu .menu-box .menu-card .menu-info h2{
+    width: 70%;
+    text-align: center;
+    margin:10px auto 10px auto;
+    font-size: 25px;
+    color: green;
+}
+
+.menu .menu-box .menu-card .menu-info .t1{
+    width: 70%;
+    text-align: center;
+    margin:10px auto 10px auto;
+    font-size: 25px;
+    color: red;
+    
+}
+
+.menu .menu-box .menu-card .menu-info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menu-box .menu-card .menu-info h3{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu .menu-box .menu-card .menu-info .menu-icon{
+    color: green;
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
+
+.menu .menu-box .menu-card .menu-info .menu-icon1{
+    color: red;
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
+
+.menu .menu-box .menu-card .menu-info .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: rgb(225, 123, 140);
+    padding: 8px 8px;
+    margin: 0 90px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.menu .menu-box .menu-card .menu-info .menu-btn:hover{
+    color: rgb(225, 123, 140);
+    background-color: rgb(226, 224, 224);
+}
+
+
+.abt .about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+    margin-bottom: 30px;
+}
+
+.abt .about .abouttext h1{
+    color: rgb(45, 50, 211);
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 0px;
+}
+
+.abt .about .about-logo img{
+    width:600px;
+    position: relative;
+    border-radius: 10px;
+    left: 70px;
+   
+    
+}
+
+.abt p{
+    width: 450px;
+    text-align: justify;
+    position: relative;
+    left:110px;
+    bottom: 130px;
+    line-height: 22px;
+}
+
+.abt .about-btn{
+    background-color: red;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 110px;
+    bottom: 80px;
+    width:130px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.abt .about-btn:hover {
+    
+    background-color: rgb(233, 107, 107);
+}
+
+.abt .about-btn a{
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+
+}
+
+.abt .about-btn i{
+    color: white;
+    transition: 0.4s; 
+}
+
+
+.abt .about-btn:hover i{
+    color: rgb(255, 252, 46);
+    transform: translateX(8);
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(Images/Chicken\ Biryani.jpeg);
+    background-size: cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color:#fff;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+
+}
+
+.contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contain .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contain .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contain .contactinfo .box .ico{
+    min-width: 60px;
+    height: 60px;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contain .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contain .contactinfo .box .text .h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.contactform .h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputBox input,
+.contactform .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+
+.contactform .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:invalid ~ span{
+    color: #e91263;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputBox input[type="submit"]{
+    width: 100px;
+    background-color: #e91263;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.contactform .inputBox input[type="submit"]:hover{
+    background-color: rgb(180, 152, 152);
+}
+
+@media (max-width:991px)
+{
+    .contact{
+        padding: 50px;
+    }
+
+    .contain{
+        flex-direction: column;
+    }
+
+    .contain .contactinfo{
+        margin-bottom: 40px;
+    }
+
+    .contain .contactinfo,
+    .contactform{
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(250, 13, 13);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(190, 0, 0);
+    
+}
